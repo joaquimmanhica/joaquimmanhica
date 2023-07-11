@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Image from 'next/image'
 import { BsFillMoonStarsFill } from "react-icons/bs";
@@ -11,7 +12,7 @@ import {
   AiFillGithub,
 } from "react-icons/ai";
 
-
+import { useState } from "react";
 import deved from "../../public/dev-ed-wave.png";
 import code from "../../public/code.png";
 import design from "../../public/design.png";
@@ -25,25 +26,27 @@ import web6 from "../../public/web6.png";
 import en_ment from "../../public/ensin-ment.png";
 
 export default function Home() {
-
+  const [darkMode, setDarkMode] = useState(false);
   return (
-   
-    <main className='bg-white px-10 font-poppins'>
-      <nav className='flex py-10 mb-12 justify-between sticky top-0 bg-white'>
+    <div className={darkMode ? "dark" : ""}>
+    <main className='bg-white px-10 font-poppins  dark:bg-gray-950 dark:text-white'>
+      <nav className='flex py-10 mb-12 justify-between sticky top-0 bg-white dark:bg-gray-950 dark:text-white'>
           <h1 className='text-xl font-poppins'>
             J . Manhica
           </h1>
           <ul className='flex items-center'>
-            <li><BsFillMoonStarsFill className='cursor-pointer text-2xl'/></li>
+            <li><BsFillMoonStarsFill 
+             onClick={() => setDarkMode(!darkMode)}
+            className='cursor-pointer text-2xl'/></li>
             <li> <a className=' bg-gray-800 text-white px-8 py-2 rounded-md ml-3' href='#'>Curriculo</a></li>
           </ul>
         </nav>
-      <section className='min-h-screen bg-white'>
+      <section className='min-h-screen bg-white dark:bg-gray-900 dark:text-white rounded-3xl p-5'>
         <div className='relative bg-gradient-to-t from-gray-950 rounded-full mx-auto w-40 h-40 overflow-hidden'>
          <GiEyelashes size={100}/>
         </div>
         <div className='text-center p-10'>
-          <h2 className='text-5xl py-2 text-gray-800 font-medium'>Joaquim Manhica</h2>
+          <h2 className='text-5xl py-2 text-gray-800 font-medium dark:text-white'>Joaquim Manhica</h2>
           <h3 className='text-2xl py-2'>Especialista em desenvolvimento Mobile</h3>
           <p className='text-gray-500 py-5 leading-8'>
           Como engenheiro de software com formação na universidade pedagógica de maputo, 
@@ -61,7 +64,7 @@ export default function Home() {
       </section>
       <section>
           <div className='text-center mt-10'>
-            <h3 className="text-3xl py-1 dark:text-white ">Meus serviços</h3>
+            <h3 className="text-3xl py-1 dark:text-gray-400 ">Meus serviços</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Sou um desenvolvedor Fullstack JavaScript especializado em desenvolvimento mobile e ensino de programação mobile. Ofereço serviços completos de criação de aplicativos móveis nativos para iOS e Android, utilizando tecnologias como React Native e Node.js. Também forneço treinamentos e mentorias personalizadas para aqueles que desejam aprender a programar aplicativos móveis. Minha abordagem é centrada no cliente, priorizando a usabilidade, experiência do usuário e performance. Tenho experiência em todas as etapas do ciclo de desenvolvimento e garanto resultados de alta qualidade.
               
@@ -71,7 +74,7 @@ export default function Home() {
             </p>
           </div>
           <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-white flex-1">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10  dark:bg-gray-900 dark:text-white flex-1">
             <div className='flex justify-center align-middle'>
             <FaPlug size={50}/>
             </div>
@@ -81,13 +84,13 @@ export default function Home() {
               <p className="py-2">
               Aplicativos híbridos são aplicações que combinam elementos de aplicativos nativos e web, sendo desenvolvidos com tecnologias web (HTML, CSS, JavaScript) e encapsulados em um contêiner nativo para funcionar em diferentes plataformas móveis.
               </p>
-              <h4 className="py-4 text-gray-900 font-bold">Ferramentas usadas no desenvolvimento</h4>
-              <p className="text-gray-800 py-1">React Native</p>
-              <p className="text-gray-800 py-1">Ionic</p>
-              <p className="text-gray-800 py-1">Flutter</p>
-              <p className="text-gray-800 py-1">PhoneGap/Cordova</p>
+              <h4 className="py-4 text-gray-900 font-bold dark:text-white">Ferramentas usadas no desenvolvimento</h4>
+              <p className="text-gray-800 py-1  dark:text-white">React Native</p>
+              <p className="text-gray-800 py-1  dark:text-white">Ionic</p>
+              <p className="text-gray-800 py-1  dark:text-white">Flutter</p>
+              <p className="text-gray-800 py-1  dark:text-white">PhoneGap/Cordova</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 flex-1 dark:bg-gray-900 dark:text-white">
             <div className='flex justify-center align-middle'>
             <IoIosPulse size={50}/>
             </div>
@@ -97,15 +100,15 @@ export default function Home() {
               <p className="py-2">
               Um aplicativo nativo é um software desenvolvido para uma plataforma específica, como iOS ou Android, usando linguagens de programação nativas suportadas pela plataforma. Eles oferecem acesso total aos recursos do dispositivo e proporcionam uma experiência de usuário otimizada e integrada.
               </p>
-              <h4 className="py-4 text-gray-900 font-bold">Ferramentas usadas no desenvolvimento</h4>
+              <h4 className="py-4 text-gray-900 font-bold  dark:text-white">Ferramentas usadas no desenvolvimento</h4>
               
-              <p className="text-gray-800 py-1">Xcode</p>
-              <p className="text-gray-800 py-1">Android Studio</p>
-              <p className="text-gray-800 py-1">Visual Studio</p>
-              <p className="text-gray-800 py-1">Flutter</p>
-              <p className="text-gray-800 py-1">React Native</p>
+              <p className="text-gray-800 py-1  dark:text-white">Xcode</p>
+              <p className="text-gray-800 py-1  dark:text-white">Android Studio</p>
+              <p className="text-gray-800 py-1  dark:text-white">Visual Studio</p>
+              <p className="text-gray-800 py-1  dark:text-white">Flutter</p>
+              <p className="text-gray-800 py-1  dark:text-white">React Native</p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+            <div className="text-center shadow-lg p-10 rounded-xl my-10 flex-1  dark:bg-gray-900 dark:text-white">
             <div className='flex justify-center align-middle'>
               <BiBook size={50}/>
             </div>
@@ -184,6 +187,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+        
     </main>
+    </div>
   )
 }
