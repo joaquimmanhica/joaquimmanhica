@@ -24,6 +24,7 @@ import web4 from "../../public/web4.png";
 import web5 from "../../public/web5.png";
 import web6 from "../../public/web6.png";
 import en_ment from "../../public/ensin-ment.png";
+import MyTypeWriterAnim from "./typewriter";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -46,7 +47,7 @@ export default function Home() {
          <GiEyelashes size={100}/>
         </div>
         <div className='text-center p-10'>
-          <h2 className='text-5xl py-2 text-gray-800 font-medium dark:text-white'>Joaquim Manhica</h2>
+          <div className='text-5xl py-2 text-gray-800 font-medium dark:text-white'><MyTypeWriterAnim myText={"Olá, sou Joaquim Manhica"}/></div>
           <h3 className='text-2xl py-2'>Especialista em desenvolvimento Mobile</h3>
           <p className='text-gray-500 py-5 leading-8'>
           Como engenheiro de software com formação na universidade pedagógica de maputo, 
