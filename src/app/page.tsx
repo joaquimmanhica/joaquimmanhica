@@ -47,7 +47,7 @@ export default function Home() {
          <GiEyelashes size={100}/>
         </div>
         <div className='text-center p-10'>
-          <div className='text-5xl py-2 text-gray-800 font-medium dark:text-white'><MyTypeWriterAnim myText={"Olá, sou Joaquim Manhica"}/></div>
+          <div className='text-5xl py-2 text-gray-800 font-medium dark:text-white'><MyTypeWriterAnim myText={"Olá, sou Joaquim Manhicaoooooooo"}/></div>
           <h3 className='text-2xl py-2'>Especialista em desenvolvimento Mobile</h3>
           <p className='text-gray-500 py-5 leading-8'>
           Como engenheiro de software com formação na universidade pedagógica de maputo, 
