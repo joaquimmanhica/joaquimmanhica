@@ -1,10 +1,14 @@
 
 import Typewriter from 'react-ts-typewriter';
 
-export default function MyTypeWriterAnim({myText}) {
+type MyTypeWriterAnimProps = {
+    myText: string;
+  };
+
+  export default function MyTypeWriterAnim({ myText }: MyTypeWriterAnimProps) {
     return (
-        <h1>
-            <Typewriter text={myText} loop={true} speed={240}/>
-        </h1>
-    )
-}
+      <h1>
+        <Typewriter text={myText} loop={true} speed={240} />
+      </h1>
+    );
+  }
