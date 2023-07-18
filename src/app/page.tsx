@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <div className={darkMode ? "dark" : ""}>
     <main className='bg-white text-gray-950 px-10 sm:p-1 font-poppins  dark:bg-gray-950 dark:text-white'>
-      <nav className='flex py-10 mb-12 justify-between sticky top-0 bg-white dark:bg-gray-950 dark:text-white z-50'>
+      <nav className='flex py-10 px-10  mb-12 justify-between sticky top-0 bg-white dark:bg-gray-950 dark:text-white z-50'>
           <h1 className='text-xl font-burtons font-bold'>
             J . Manhica
           </h1>
