@@ -12,8 +12,8 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-          'my-hero': "url('../../public/web1.png')",
-          'my-footer': "url('../../public/web2.png')",
+          'my_hero': "url('../../public/img/bgFooter.png')",
+          'my_footer': "url('../../public/img/bgFooter.jpg')",
       },
       fontFamily: {
         burtons: "burtons",
