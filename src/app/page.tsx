@@ -33,8 +33,8 @@ export default function Home() {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-    <main className='bg-white text-gray-950 px-10 sm:p-1 font-poppins  dark:bg-gray-900 dark:text-white'>
-      <nav className='flex py-10 px-10  mb-0 justify-between sticky top-0 bg-white dark:bg-gray-800 dark:text-white z-50'>
+    <main className='bg-white text-gray-950 px-0 sm:p-0 font-poppins  dark:bg-gray-900 dark:text-white'>
+      <nav className='flex py-10 px-10  mb-0 justify-between sticky top-0 bg-white max-sm:p-3 dark:bg-gray-800 dark:text-white z-50'>
           <h1 className='text-xl font-burtons font-bold'>
             J . Manhica
           </h1>
@@ -71,7 +71,7 @@ export default function Home() {
        
       </section>
       <section>
-          <div className='text-center mt-5'>
+          <div className='text-center mt-5 mx-2 my-2'>
             <h3 className="text-3xl py-1 dark:text-white ">Meus serviços</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
               Sou um desenvolvedor Fullstack JavaScript especializado em desenvolvimento mobile e ensino de programação mobile. Ofereço serviços completos de criação de aplicativos móveis nativos para iOS e Android, utilizando tecnologias como React Native e Node.js. Também forneço treinamentos e mentorias personalizadas para aqueles que desejam aprender a programar aplicativos móveis. Minha abordagem é centrada no cliente, priorizando a usabilidade, experiência do usuário e performance. Tenho experiência em todas as etapas do ciclo de desenvolvimento e garanto resultados de alta qualidade.
